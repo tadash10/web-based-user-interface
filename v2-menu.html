@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nmap Defender Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nmap Defender Menu</h1>
+    <ul>
+        <li><a href="{{ url_for('run_defender') }}">Start Nmap Defender</a></li>
+        <li><a href="{{ url_for('whitelist') }}">Whitelist IP Address</a></li>
+        <li><a href="{{ url_for('rate_limit') }}">Set Rate Limit for IP Address</a></li>
+        <li><a href="{{ url_for('quit') }}">Quit</a></li>
+    </ul>
+</body>
+</html>
